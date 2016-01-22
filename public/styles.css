@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700);*/
+@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700);
 
 * {
   background-color: #FDFCF8;
@@ -15,12 +15,6 @@ h1 {
   text-align: center;
 }
 
-.links {
-  font-family: 'Old Standard TT', serif;
-  font-size: 25px;
-  text-align: center;
-  color: black;
-}
 
 .main {
   font-family: 'Old Standard TT', serif;
@@ -30,12 +24,10 @@ h1 {
   letter-spacing: .1em;
   color: #651a37;
   text-align: center;
-
 }
 
-p {
+.link1 {
   text-align: center;
   font-family: 'Old Standard TT', serif;
-  font-size: 30px;
-
+  color: black;
 }

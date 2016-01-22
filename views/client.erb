@@ -1,3 +1,4 @@
+<div class="container">
 <h1><%= @client.name()%></h1>
 
 <h4>Update Client Info</h4>
@@ -12,5 +13,7 @@
 <h4>Remove <%= @client.name()%> from the salon</h4>
 <form action='/client_list/<%= @client.id() %>' method='post'>
      <input name="_method" type="hidden" value="delete">
-     <button class='btn'>Delete</button>
+     <button class='btn btn-default'>Delete</button>
 </form>
+<a href="/">Home</a>
+</div>

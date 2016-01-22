@@ -1,7 +1,8 @@
+<div class="container">
 <h1><%= @stylist.name()%></h1>
 
   <% if @clients.any?() %>
-    <h3><%= @stylist.name()%> 's Clients:</h3>
+    <h3 class="subtext"><%= @stylist.name()%> 's Clients:</h3>
         <ul>
         <% @clients.each() do |client| %>
           <li><a href="/client_list<%= client.id %>"><%= client.name() %></a></li>
@@ -26,11 +27,15 @@
   <input name="_method" type="hidden" value="patch">
   <label for="update_name">Change Info</label>
   <input id="update_name" name="update_name" type="text">
-  <button type="submit">Update</button>
+  <button type="submit" class="btn btn-default">Update</button>
 </form>
 
 <h4>Remove <%= @stylist.name()%> from the salon</h4>
 <form action='/stylist/<%= @stylist.id() %>' method='post'>
      <input name="_method" type="hidden" value="delete">
-     <button class='btn'>Delete</button>
+     <button class='btn btn-default'>Delete</button>
 </form>
+
+  <a href="/">Home</a>
+
+</div>
