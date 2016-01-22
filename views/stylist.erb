@@ -1,1 +1,21 @@
-  <h1><%= @stylist.name()%></h1>
+<h1><%= @stylist.name()%></h1>
+
+  <% if @clients.any?() %>
+    <h3><%= @stylist.name()%> 's Clients:</h3>
+        <ul>
+        <% @clients.each() do |client| %>
+          <li><a href="/client/<%= client.id %>"><%= client.name() %></a></li>
+        <% end %>
+      </ul>
+      <% else %>
+    <h3><%= @stylist.name()%> doesn't appear to have any clients. Add some below!</h3>
+    <% end %>
+
+
+<form action='/stylist/<%= @stylist.id() %>' method ='post'>
+  <input id="stylist_id" name="stylist_id" type="hidden" value="<%= @stylist.id() %>">
+  <label for='name'>Add New Client</label>
+  <input id='name' name='name' type='text'>
+
+  <button type="submit" class="btn btn-default">Add</button>
+</form>
