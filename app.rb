@@ -60,3 +60,22 @@ patch('/stylist/:id') do
   @clients = @stylist.find_clients()
   erb(:stylist)
 end
+
+get('/client_list/:id') do
+  @client = Client.find(params.fetch("id").to_i())
+  erb(:client)
+end
+
+delete('/client_list/:id') do
+  @client = Client.find(params.fetch("id").to_i())
+  @client.delete()
+  @clients = Client.all()
+  erb(:client_list)
+end
+
+patch('/client_list/:id') do
+  name = params.fetch("update_client")
+  @client = Client.find(params.fetch("id").to_i())
+  @client.update({:name => name})
+  erb(:client)
+end
