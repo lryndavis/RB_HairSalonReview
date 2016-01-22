@@ -1,0 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700);
+
+* {
+  background-color: #FDFCF8;
+}
+
+h1 {
+  font-family: 'Old Standard TT', serif;
+  font-size: 80px;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: .1em;
+  color: #651a37;
+  text-align: center;
+}
