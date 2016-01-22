@@ -29,3 +29,9 @@ post('/stylist_list') do
   @stylists = Stylist.all()
   erb(:stylist_list)
 end
+
+get('/stylist_list/:id') do
+  @id = params.fetch('id').to_i()
+  @stylist = Stylist.find(@id)
+  erb(:stylist)
+end
