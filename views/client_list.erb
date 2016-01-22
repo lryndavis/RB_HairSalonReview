@@ -1,0 +1,21 @@
+
+
+<% if @clients.any?() %>
+<h1 class ="main">Clients at Salon</h1>
+  <ul>
+    <% @clients.each() do |client| %>
+    <li><a href="/client_list/<%= client.id()%>"><%= client.name() %></a> </li>
+    <% end %>
+  </ul>
+
+  <% else %>
+
+  <p>
+    There are currently no clients at Salon!
+  </p>
+
+  <% end %>
+
+<div class="links">
+  <a href="/clients/new">Add a new client</a>
+</div>
