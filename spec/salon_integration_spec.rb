@@ -42,3 +42,18 @@ describe('deleting stylists from the salon', {:type => :feature}) do
     expect(page).not_to(have_content('Sherman Dog'))
   end
 end
+
+describe('updating stylist names', {:type => :feature}) do
+  it('allows a user to update a stylists name') do
+    visit('/')
+    click_link('Stylists at Salon')
+    fill_in('stylist', :with =>'Sherman Dog')
+    click_button('Add New Stylist')
+    expect(page).to have_content('Sherman Dog')
+    click_link('Sherman Dog')
+    expect(page).to have_content('Update Stylist Info')
+    fill_in('update_name', :with =>'Sherman the Dog')
+    click_button('Update')
+    expect(page).to have_content('Sherman the Dog')
+  end
+end
