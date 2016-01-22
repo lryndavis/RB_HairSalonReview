@@ -2,12 +2,11 @@
 
 * {
   background-color: #FDFCF8;
-
 }
 
 h1 {
   font-family: 'Old Standard TT', serif;
-  font-size: 80px;
+  font-size: 90px;
   font-style: italic;
   font-weight: 500;
   letter-spacing: .1em;
@@ -15,19 +14,13 @@ h1 {
   text-align: center;
 }
 
-
-.main {
-  font-family: 'Old Standard TT', serif;
-  font-size: 80px;
-  font-style: italic;
-  font-weight: 500;
-  letter-spacing: .1em;
-  color: #651a37;
-  text-align: center;
-}
-
-.link1 {
-  text-align: center;
+.link1, .link2 {
   font-family: 'Old Standard TT', serif;
   color: black;
+
+}
+
+.container1 {
+  text-align: center;
+
 }

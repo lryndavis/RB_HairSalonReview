@@ -1,27 +1,30 @@
 <div class="container">
-<% if @stylists.any?() %>
-<h1>Stylists at Salon</h1>
-  <ul>
-    <% @stylists.each() do |stylist| %>
-    <li><a href="/stylist_list/<%= stylist.id()%>"><%= stylist.name() %></a> </li>
+
+  <h1>Manage Stylists</h1>
+
+    <% if @stylists.any?() %>
+
+      <ul>
+        <% @stylists.each() do |stylist| %>
+        <li><a href="/stylist_list/<%= stylist.id()%>"><%= stylist.name() %></a> </li>
+        <% end %>
+      </ul>
+
+      <% else %>
+
+      <p>
+        There are currently no stylists at Salon!
+      </p>
+
     <% end %>
-  </ul>
-
-  <% else %>
-
-  <p>
-    There are currently no stylists at Salon!
-  </p>
-
-  <% end %>
 
   <h2 class="subtext">Add a new Stylist</h2>
 
-  <form action="/stylist_list" method="post">
-    <label for="stylist"></label>
-    <input id="stylist" name="stylist" type="text" class="form-control">
-    <button name="submit" class="btn btn-default">Add New Stylist</button>
-  </form>
+    <form action="/stylist_list" method="post">
+      <label for="stylist"></label>
+      <input id="stylist" name="stylist" type="text" class="form-control">
+      <button name="submit" class="btn btn-default">Add New Stylist</button>
+    </form>
 
   <a href="/">Home</a>
 
