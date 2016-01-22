@@ -45,3 +45,10 @@ post('/stylist/:id') do
   @clients = @stylist.find_clients()
   erb(:stylist)
 end
+
+delete('/stylist/:id') do
+  @stylist = Stylist.find(params.fetch("id").to_i())
+  @stylist.delete()
+  @stylists = Stylist.all()
+  erb(:stylist_list)
+end

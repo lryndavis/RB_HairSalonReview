@@ -28,3 +28,17 @@ describe('adding clients to a stylist', {:type => :feature}) do
     expect(page).to have_content('Damien Cat')
   end
 end
+
+describe('deleting stylists from the salon', {:type => :feature}) do
+  it('allows a user to delete stylists') do
+    visit('/')
+    click_link('Stylists at Salon')
+    fill_in('stylist', :with =>'Sherman Dog')
+    click_button('Add New Stylist')
+    expect(page).to have_content('Sherman Dog')
+    click_link('Sherman Dog')
+    expect(page).to have_content('Remove Sherman Dog from the salon')
+    click_button('Delete')
+    expect(page).not_to(have_content('Sherman Dog'))
+  end
+end
