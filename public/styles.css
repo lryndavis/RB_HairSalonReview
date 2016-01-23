@@ -23,19 +23,35 @@ h2 {
 
 h3 {
   font-family: 'Didot';
-  font-size: 45px;
+  font-size: 30px;
   color: #651a37;
+}
+
+h4 {
+  font-family: 'Didot';
+  font-size: 20px;
+  color: #651a37;
+  padding-top: 10px;
+  padding-bottom: 5px;
 
 }
 
+
+
+
 a:link {
   text-decoration: none;
+  color: black;
 }
 
 a:hover {
   color: #8e254d;
 }
 
+a:visited {
+  color: black;
+
+}
 
 
 .link1 {
@@ -50,4 +66,26 @@ a:hover {
   font-family: 'Futura';
   color: black;
   font-size: 15px;
+
+}
+
+ul, li {
+  font-family: 'Futura';
+  color: black;
+  font-size: 18px;
+}
+
+.italicize {
+  font-family: 'Didot';
+  font-size: 60px;
+  color: #651a37;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.homelink {
+font-family: 'Futura';
+color: black;
+font-size: 15px;
+
 }

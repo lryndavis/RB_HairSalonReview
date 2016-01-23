@@ -1,22 +1,24 @@
 <div class="container">
+  <div class="container1">
+    <h2>Manage <span class="italicize">Clients</span></h2>
+      <% if @clients.any?() %>
 
-  <h2>Manage Clients</h2>
-    <% if @clients.any?() %>
+        <ul>
+          <% @clients.each() do |client| %>
+          <li><a href="/client_list/<%= client.id()%>"><%= client.name() %></a> </li>
+          <% end %>
+        </ul>
 
-      <ul>
-        <% @clients.each() do |client| %>
-        <li><a href="/client_list/<%= client.id()%>"><%= client.name() %></a> </li>
-        <% end %>
-      </ul>
+      <% else %>
 
-    <% else %>
+        <p>
+          There are currently no clients at Salon!
+        </p>
 
-      <p>
-        There are currently no clients at Salon!
-      </p>
+      <% end %>
 
-    <% end %>
-
-  <a href="/">Home</a>
-
+    <a href="/" class="homelink">HOME</a>
+    </br>
+    <a href="/stylist_list" class="homelink">RETURN TO STYLISTS</a>
+  </div>
 </div>

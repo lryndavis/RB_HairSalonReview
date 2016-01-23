@@ -1,6 +1,6 @@
 <div class="container">
 
-  <h2>Manage Stylists</h2>
+  <h2>Manage <span class="italicize">Stylists</span></h2>
 
     <% if @stylists.any?() %>
 
@@ -18,14 +18,14 @@
 
     <% end %>
 
-  <h3>Add a new Stylist</h3>
+  <h3>Add a new Stylist:</h3>
 
-    <form action="/stylist_list" method="post">
+    <form action="/stylist_list" method="post" class="form-inline">
       <label for="stylist"></label>
-      <input id="stylist" name="stylist" type="text" class="form-control">
+      <input id="stylist" name="stylist" type="text" class="form-control" placeholder="Stylist">
       <button name="submit" class="btn btn-default">Add New Stylist</button>
     </form>
-
-  <a href="/">Home</a>
+  </br>
+  <a href="/" class="homelink">HOME</a>
 
 </div>

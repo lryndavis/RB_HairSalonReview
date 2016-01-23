@@ -37,7 +37,7 @@ describe('deleting stylists from the salon', {:type => :feature}) do
     click_button('Add New Stylist')
     expect(page).to have_content('Sherman Dog')
     click_link('Sherman Dog')
-    expect(page).to have_content('Remove Sherman Dog from the salon')
+    expect(page).to have_content('Remove Sherman Dog from the Salon')
     click_button('Delete')
     expect(page).not_to(have_content('Sherman Dog'))
   end
