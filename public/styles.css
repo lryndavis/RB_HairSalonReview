@@ -1,26 +1,53 @@
-@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700);
+/*@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700);*/
 
 * {
   background-color: #FDFCF8;
 }
 
 h1 {
-  font-family: 'Old Standard TT', serif;
-  font-size: 90px;
+  /*font-family: 'Old Standard TT', serif;*/
+  font-family: 'Didot';
+  font-size: 120px;
   font-style: italic;
-  font-weight: 500;
-  letter-spacing: .1em;
+  /*font-weight: bold;*/
+  letter-spacing: .09em;
   color: #651a37;
-  text-align: center;
+  margin-bottom: -5px;
 }
 
-.link1, .link2 {
-  font-family: 'Old Standard TT', serif;
+h2 {
+  font-family: 'Didot';
+  font-size: 60px;
+  color: #651a37;
+}
+
+h3 {
+  font-family: 'Didot';
+  font-size: 45px;
+  color: #651a37;
+
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #8e254d;
+}
+
+
+
+.link1 {
+  font-family: 'Futura';
   color: black;
+  padding-right: 30px;
+  font-size: 15px;
 
 }
 
-.container1 {
-  text-align: center;
-
+.link2 {
+  font-family: 'Futura';
+  color: black;
+  font-size: 15px;
 }

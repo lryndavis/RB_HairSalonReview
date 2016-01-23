@@ -7,7 +7,7 @@ set(:show_exceptions, false)
 describe('adding a new stylist', {:type => :feature}) do
   it('allows a user to add a new stylist') do
     visit('/')
-    click_link('Manage Stylists')
+    click_link('MANAGE STYLISTS')
     fill_in('stylist', :with =>'Sherman Dog')
     click_button('Add New Stylist')
     expect(page).to have_content('Sherman Dog')
@@ -17,7 +17,7 @@ end
 describe('adding clients to a stylist', {:type => :feature}) do
   it('allows a user to add new clients to a particular stylist') do
     visit('/')
-    click_link('Manage Stylists')
+    click_link('MANAGE STYLISTS')
     fill_in('stylist', :with =>'Sherman Dog')
     click_button('Add New Stylist')
     expect(page).to have_content('Sherman Dog')
@@ -32,7 +32,7 @@ end
 describe('deleting stylists from the salon', {:type => :feature}) do
   it('allows a user to delete stylists') do
     visit('/')
-    click_link('Manage Stylists')
+    click_link('MANAGE STYLISTS')
     fill_in('stylist', :with =>'Sherman Dog')
     click_button('Add New Stylist')
     expect(page).to have_content('Sherman Dog')
@@ -46,7 +46,7 @@ end
 describe('updating stylist names', {:type => :feature}) do
   it('allows a user to update a stylists name') do
     visit('/')
-    click_link('Manage Stylists')
+    click_link('MANAGE STYLISTS')
     fill_in('stylist', :with =>'Sherman Dog')
     click_button('Add New Stylist')
     expect(page).to have_content('Sherman Dog')
@@ -61,7 +61,7 @@ end
 describe('view and update client info', {:type => :feature}) do
   it('allows a user to view and update a client name') do
     visit('/')
-    click_link('Manage Stylists')
+    click_link('MANAGE STYLISTS')
     fill_in('stylist', :with =>'Sherman Dog')
     click_button('Add New Stylist')
     expect(page).to have_content('Sherman Dog')
@@ -82,7 +82,7 @@ end
 describe('delete a client path', {:type => :feature}) do
   it('allows a user to delete a client') do
     visit('/')
-    click_link('Manage Stylists')
+    click_link('MANAGE STYLISTS')
     fill_in('stylist', :with =>'Sherman Dog')
     click_button('Add New Stylist')
     expect(page).to have_content('Sherman Dog')
